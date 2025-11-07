@@ -30,5 +30,54 @@
 
 @layer components {
     /* todo components */
- 
+    .card-text-primary{
+        color: var(--primary);
+    }
+    .card-text-bigger{
+        font-size: 2em;
+    }
+    .card-text-bold{
+        font-weight: 700;
+    }
+    .card--marketer{
+        border: var(--text) 0.5px solid;
+        border-radius: 15px;
+        padding: 2rem;
+    }
+    .card-header{
+        margin: 0;
+        font-size: 2em;
+        color: var(--secondary);
+        font-weight: 600;
+    }
+    .card-button{
+        margin: 2em auto 0 auto;
+        display: block;
+        padding: 1em;
+        text-align: center;
+        background-color: var(--primary);
+        border-radius: 10px;
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+    }
+    .card__body{
+        margin: 2em 0;
+    }
+    .card__features{
+        padding: 0 2rem;
+        margin: 0;
+    }
+    .card__feature-item{
+        margin: 0;
+        padding: 0.5em;
+        text-wrap: nowrap;
+    }
+    .card__feature-item-check{
+        list-style-image: url('../images/check.svg');
+    }
+
+    .card__feature-item-cross{
+        list-style-image: url('../images/cross.svg');
+    }
 }
