@@ -10,6 +10,7 @@
         --denied: #ff8686;
         --text: #515959;
         --border: #59de0c;
+        --business: linear-gradient(180deg, #2C3A4C 0%, #3A495C 100%);
     }
     .main {
         display: flow-root;
@@ -40,6 +41,7 @@
         font-weight: 700;
     }
     .card--marketer{
+        display: inline-block;
         border: var(--text) 0.5px solid;
         border-radius: 15px;
         padding: 2rem;
@@ -79,5 +81,10 @@
 
     .card__feature-item-cross{
         list-style-image: url('../images/cross.svg');
+    }
+    .card--business__header{
+        text-align: center;
+        color:white;
+        background: var(--business);
     }
 }
