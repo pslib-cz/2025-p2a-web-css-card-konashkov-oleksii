@@ -10,7 +10,7 @@
         --denied: #ff8686;
         --text: #515959;
         --border: #59de0c;
-        --business: linear-gradient(180deg, #2C3A4C 0%, #3A495C 100%);
+        --business: linear-gradient(-90deg, #2C3A4C 0%, #3A495C 100%);
     }
     .main {
         display: flow-root;
@@ -26,11 +26,19 @@
         max-width: 21em;
         margin: 1rem; /* without scaling */
         padding: 1em;
+        background-color: white;
+
     }
 }
 
 @layer components {
     /* todo components */
+    main{
+        background-color: #60489E;
+    }
+    .cards-list{
+        display: flex;
+    }
     .card-text-primary{
         color: var(--primary);
     }
@@ -54,7 +62,7 @@
     }
     .card-button{
         margin: 2em auto 0 auto;
-        display: block;
+        display: inline-block;
         padding: 1em;
         text-align: center;
         background-color: var(--primary);
@@ -82,9 +90,82 @@
     .card__feature-item-cross{
         list-style-image: url('../images/cross.svg');
     }
+
+    .card--business{
+        font-family: Verdana, Tahoma, sans-serif;
+        display: inline-block;
+        background-color: #F7F9FB;
+        border: white 0.5px solid;
+        border-radius: 15px;
+        padding: 0;
+        height: 650px;
+        /* width: 18rem; */
+    }
     .card--business__header{
-        text-align: center;
-        color:white;
         background: var(--business);
+        text-align: left;
+        color:white;
+        padding: 2em 1em;
+        border-radius: 15px 15px 0 0;
+    }
+    .card--business-header__main{
+        margin: 0;
+        font-size: 2em;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    .card--business-header__subtext{
+        font-weight: 100;
+    }
+    .card--business__body{
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+        padding: 0 ;
+    }
+    .card--business-numbers{
+        display: block;
+        text-transform: uppercase;
+        color: #3A495C;
+        font-size: 2em;
+        font-weight: 500;
+    }
+    .card--business-body__text{
+        text-align: center;
+        width: 33%;
+        background-color: white;
+        margin: 0;
+        padding:1rem 0;
+    }
+    .card--business__features{
+        padding: 0;
+        margin: 2rem auto;
+        width: 80%;
+    }
+    .card--business__features:first-child{
+        margin-top:0;
+    }
+    .card--business-features__item{
+        list-style: none;
+        padding: 1em 1.2em;
+        background-color: white;
+        border-radius: 7px;
+        margin-top: 1em;
+        box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.095);
+        border-left: solid 5px #3C4B5D;
+    }
+    .card--business__button{
+        display: block;
+        width: 80%;
+        padding: 1em 0;
+        margin: auto;
+        background: var(--business);
+        border-radius: 5px;
+        font-size: 1.05em;
+        text-decoration: none;
+        font-weight: 600;
+        text-align: center;
+        text-transform:uppercase;
+        color:white;
     }
 }
